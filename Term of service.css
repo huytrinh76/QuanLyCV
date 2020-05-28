@@ -1,5 +1,6 @@
 body{
     background-image: url('https://i.stack.imgur.com/jGlzr.png');
+    transition: 1s ease;
 }
 .header{
     display: flex;
@@ -40,4 +41,16 @@ body{
 .signup:hover{
     background-color: blue;
     transition: 0.8s ease;
+}
+.layout{
+    width: 80%;
+    margin: auto;
+    background-color: white;
+}
+.term{
+    font-size: 18px;
+}
+.layout-term{
+    width: 90%;
+    margin: auto;
 }
