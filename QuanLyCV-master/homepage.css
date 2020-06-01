@@ -1,6 +1,22 @@
 body{
     background-image: url('https://i.stack.imgur.com/jGlzr.png');
 }
+
+#container{
+    width:380px;
+    height: 350px;
+    max-height:350px;
+    background-color: #FFF;
+    overflow: auto;
+}
+#currentDate{
+    position: absolute;
+    left: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
 .header{
     display: flex;
     background-color: white;

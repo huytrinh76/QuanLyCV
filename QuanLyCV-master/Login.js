@@ -7,25 +7,26 @@ async function fetchdata(){
 async function render(){
     const rlData = await fetchdata()
     console.log(rlData)
-
     let i = 0
     const mainFormSignUp = document.getElementById('mainFormSignUp')
     mainFormSignUp.addEventListener('submit',(e) => {
-    e.preventDefault()
-    rlData.forEach((element) =>{
-    if (mainFormSignUp.password.value == rlData[element].Password
-        && mainFormSignUp.mail.value == rlData[element].Email){
-       i += 1
-    }
-    else i = 0
-    
-    if (i = 0){
-        alert('Account does not exist, please try again')
-    window.location.href = 'file:///C:/Users/Admin/Desktop/C4EJS72/QuanLyCV-master/Login.html'
-    }
-    else window.location.href = 'file:///C:/Users/Admin/Desktop/C4EJS72/QuanLyCV-master/homepage.html'
-    })})
+        e.preventDefault()
+        console.log(mainFormSignUp.password.value)
+        rlData.forEach((element) =>{
+            if ( mainFormSignUp.email.value == element.Email){
+                if (mainFormSignUp.password.value == element.Password){
+                    i = i + 1
+                }
+        }})
+        if (i == 0){
+            alert('Account does not exist, please try again')
+            location.reload()
+        }
+        else {alert('Moving to homepage')
+            window.location.href = 'file:///C:/Users/Admin/Desktop/C4EJS72/QuanLyCV-master/homepage.html'
+    }})
 }
+render()
         
 
 
