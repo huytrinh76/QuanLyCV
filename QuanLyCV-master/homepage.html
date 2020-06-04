@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSb5ELyb-DQy9uXAO9dd2b1SjKOzHneGmTQY_Q4PVWIJUmSoYFc&usqp=CAU">
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
     <div class="header">
@@ -19,16 +20,17 @@
             <a class="signup" href="Sign up.html">Sign up</a>
         </div>
     </div>
-    <div>
         <button id="refreshButton" onclick="window.location.reload()">Refresh page</button>
+        <div id="adding">
+            <button id='addButton'>Add items</button>
+            <input type="text" placeholder="Add stuff to the list" id="addText">
+        </div>
         <div id = 'currentDate'></div>
-    </div>
+        
         <ul id="container">
         </ul>
-    <div id="adding">
-        <button id='addButton'>add</button>
-        <input type="text" placeholder="Add stuff to the list" id="addText">
-    </div>
+        
+    
     <script src="homepage.js"></script>
 </body>
 </html>

@@ -1,15 +1,38 @@
 body{
     background-image: url('https://i.stack.imgur.com/jGlzr.png');
 }
-
+.done{
+    text-decoration: line-through;
+}
 #container{
     width:380px;
-    height: 350px;
-    max-height:350px;
+    height: 330px;
+    max-height:330px;
     background-color: #FFF;
     overflow: auto;
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+#addButton{
+    margin-left:465px;
+}
+#refreshButton{
+    margin-left:465px;
+}
+.delButton{
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+.delButton:hover{
+    background-color: royalblue
 }
 #currentDate{
+    margin-left:465px;
+    margin-block-end: auto;
     position: absolute;
     left: 10px;
     color: rgb(255, 255, 255);
