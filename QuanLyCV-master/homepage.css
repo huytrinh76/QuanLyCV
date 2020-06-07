@@ -1,9 +1,14 @@
 body{
     background-image: url('https://i.stack.imgur.com/jGlzr.png');
 }
+
 .done{
     text-decoration: line-through;
 }
+.fa-dot-circle{
+    color:#6eb200;
+}
+
 #container{
     width:380px;
     height: 330px;
@@ -21,11 +26,11 @@ body{
     margin-left:465px;
 }
 .delButton{
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
+    border: none; 
+    color: white; 
+    padding: 12px 16px; 
+    font-size: 16px; 
+    cursor: pointer; 
 }
 .delButton:hover{
     background-color: royalblue
@@ -39,10 +44,9 @@ body{
     font-size: 13px;
     font-family: 'Titillium Web', sans-serif;
 }
-
 .header{
     display: flex;
-    background-color: white;
+    background-color: whitesmoke;
 }
 .img-header{
     width: 10%;
@@ -74,9 +78,9 @@ body{
     font-size: 18px;
     margin: 10px;
     padding: 10px 20px 10px 20px;
-    border-radius: 10%;
+    border-radius: 12%;
 }
 .signup:hover{
-    background-color: blue;
+    background-color: purple;
     transition: 0.8s ease;
 }

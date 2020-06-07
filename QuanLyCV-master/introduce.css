@@ -1,6 +1,5 @@
 body{
     background-image: url('https://i.stack.imgur.com/jGlzr.png');
-    transition: 1s ease;
 }
 .header{
     display: flex;
@@ -42,15 +41,11 @@ body{
     background-color: purple;
     transition: 0.8s ease;
 }
-.layout{
-    width: 80%;
-    margin: auto;
+.present{
     background-color: whitesmoke;
-}
-.term{
-    font-size: 18px;
-}
-.layout-term{
-    width: 90%;
     margin: auto;
+    width: 80%;
+}
+.text-word{
+    font-size: 18px;
 }

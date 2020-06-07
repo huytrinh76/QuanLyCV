@@ -3,7 +3,7 @@ body{
 }
 .header{
     display: flex;
-    background-color: white;
+    background-color: whitesmoke;
 }
 .img-header{
     width: 10%;
@@ -19,7 +19,7 @@ body{
     text-decoration: none;
     margin: 10px;
     line-height: 80px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
     font-size: 18px;
     color: black;
     border-radius: 5%;
@@ -35,10 +35,10 @@ body{
     font-size: 18px;
     margin: 10px;
     padding: 10px 20px 10px 20px;
-    border-radius: 10%;
+    border-radius: 12%;
 }
 .signup:hover{
-    background-color: blue;
+    background-color: purple;
     transition: 0.8s ease;
 }
 h3{
@@ -75,8 +75,10 @@ h3{
     color: black;
 }
 button{
-   width: 100%;
+   width: 70%;
    padding: 16px 0px;
+   font-size: 15px;
+   border-radius: 5%;
 }
 .bsign{
     padding: 10px 20px;
@@ -86,6 +88,9 @@ button{
     color: white;
 }
 .bsign:hover{
-    background-color: blue;
+    background-color: purple;
     transition: 0.8s ease;
+}
+input{
+    padding: 5px;
 }
