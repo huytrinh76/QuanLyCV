@@ -23,21 +23,6 @@ function render(){
     })
 }
 
-// Add check button
-const checkButton = document.getElementsByClassName('far fa-circle')
-function check(){
-    for ( let i = 0; i < checkButton.length; i ++){
-        checkButton[i].addEventListener('click', function(){           
-            const checkCircle = document.getElementById(`circle${i}`)
-            checkCircle.classList.toggle('fa-circle')
-            checkCircle.classList.toggle('fa-dot-circle')    
-            const checkElement = document.getElementById(`${i}`)
-            checkElement.classList.toggle("done")
-        }
-        )}
-}
-
-
 //Add add items button
 const addText = document.getElementById('addText')
 addText.addEventListener('keyup', function(event){
@@ -59,6 +44,20 @@ addButton.addEventListener('click',function(){
     }
    
 })
+
+// Add check button
+const checkButton = document.getElementsByClassName('far fa-circle')
+function check(){
+    for ( let i = 0; i < checkButton.length; i ++){
+        checkButton[i].addEventListener('click', function(){           
+            const checkCircle = document.getElementById(`circle${i}`)
+            checkCircle.classList.toggle('fa-circle')
+            checkCircle.classList.toggle('fa-dot-circle')    
+            const checkElement = document.getElementById(`${i}`)
+            checkElement.classList.toggle("done")
+        }
+        )}
+}
 
 //Erase item from list
 const delButton = document.getElementsByClassName('fa fa-trash')

@@ -9,6 +9,9 @@ body{
     color:#6eb200;
 }
 
+.fa-circle:hover{
+    background-color: royalblue
+}
 #container{
     width:380px;
     height: 330px;
@@ -25,14 +28,13 @@ body{
 #refreshButton{
     margin-left:465px;
 }
-.delButton{
+.fa-trash{
     border: none; 
-    color: white; 
-    padding: 12px 16px; 
     font-size: 16px; 
     cursor: pointer; 
+    right: 50%
 }
-.delButton:hover{
+.fa-trash:hover{
     background-color: royalblue
 }
 #currentDate{
