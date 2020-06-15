@@ -19,6 +19,7 @@ function postData(url, data){
 const mainFormSignUp = document.getElementById('mainFormSignUp')
 mainFormSignUp.addEventListener('submit',(e) => {
     e.preventDefault()
+    // if (mainFormSignUp.email.value === )
     if (mainFormSignUp.password.value === mainFormSignUp.confirmPass.value){
         let data = {
             'Email': mainFormSignUp.email.value,
