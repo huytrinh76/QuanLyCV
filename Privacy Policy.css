@@ -1,50 +1,6 @@
 body{
     background-image: url('https://i.stack.imgur.com/jGlzr.png');
-}
-
-.done{
-    text-decoration: line-through;
-}
-.fa-dot-circle{
-    color:#6eb200;
-}
-
-.fa-circle:hover{
-    background-color: royalblue
-}
-#container{
-    width:380px;
-    height: 330px;
-    max-height:330px;
-    background-color: #FFF;
-    overflow: auto;
-    margin: auto;
-    margin-top: 16px;
-    margin-bottom: 16px;
-}
-#addButton{
-    margin-left:465px;
-}
-#saveButton{
-    margin-left:465px;
-}
-.fa-trash{
-    border: none; 
-    font-size: 16px; 
-    cursor: pointer; 
-    right: 50%
-}
-.fa-trash:hover{
-    background-color: royalblue
-}
-#currentDate{
-    margin-left:465px;
-    margin-block-end: auto;
-    position: absolute;
-    left: 10px;
-    color: rgb(255, 255, 255);
-    font-size: 13px;
-    font-family: 'Titillium Web', sans-serif;
+    transition: 1s ease;
 }
 .header{
     display: flex;
@@ -85,4 +41,16 @@ body{
 .signup:hover{
     background-color: purple;
     transition: 0.8s ease;
+}
+.layout{
+    width: 80%;
+    margin: auto;
+    background-color: whitesmoke;
+}
+.term{
+    font-size: 18px;
+}
+.layout-term{
+    width: 90%;
+    margin: auto;
 }
