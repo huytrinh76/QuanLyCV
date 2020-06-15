@@ -3,11 +3,10 @@ async function fetchdata(){
     const realData = await firstData.json()
     return realData
 }
-
+let loginID = 0
 async function render(){
     const rlData = await fetchdata()
     console.log(rlData)
-    let i = 0
     const mainFormSignUp = document.getElementById('mainFormSignUp')
     mainFormSignUp.addEventListener('submit',(e) => {
         e.preventDefault()
@@ -15,18 +14,20 @@ async function render(){
         rlData.forEach((element) =>{
             if ( mainFormSignUp.email.value == element.Email){
                 if (mainFormSignUp.password.value == element.Password){
-                    i = i + 1
+                    loginID = element.id
                 }
         }})
-        if (i == 0){
+        if (loginID == 0){
             alert('Account does not exist, please try again')
             location.reload()
         }
         else {alert('Moving to homepage')
             window.location.href = 'file:///C:/Users/Admin/Desktop/C4EJS72/QuanLyCV-master/homepage.html'
     }})
+    return loginID
 }
 render()
+// export{loginID}
         
 
 

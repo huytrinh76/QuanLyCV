@@ -1,3 +1,10 @@
+// import {loginID} from './Login'
+// const accountName = document.getElementById('accountName')
+// accountName.innerHTML = loginID
+
+// console.log(loginID)
+
+//Homepage js
 const ulElement = document.getElementById("container")
 const LIST = []
 const addButton = document.getElementById('addButton')
@@ -14,7 +21,7 @@ currentDate.insertAdjacentHTML('beforeend', ` ${date}`)
 function render(){
     ulElement.innerHTML = ''
     for (i =0; i<LIST.length; i++){
-        console.log(LIST[i].name)
+        // console.log(LIST[i].name)
         if (LIST[i].status == 'false'){
             innerHTML =  
                 `<li>
@@ -61,6 +68,7 @@ addButton.addEventListener('click',function(){
 // Add check button
 function check(circle){
     const checkButton = document.getElementsByClassName(`${circle}`)
+    console.log(checkButton)
     for ( let i = 0; i < checkButton.length; i ++){
         checkButton[i].addEventListener('click', function(){ 
             const checkElement = document.getElementById(`item${i}`) 
@@ -70,15 +78,19 @@ function check(circle){
             checkElement.classList.toggle("done")  
             if (LIST[i].status == 'false'){ 
                 LIST[i].status = 'true'
-                console.log(i)
+                // console.log('Nut check')
+                // console.log(i +1)
                 
             } else{
-                console.log(i)
+                // console.log('Nut check')
+                // console.log(i+1)
                 LIST[i].status = 'false'
             }
+            
+             
         }
         )}
-        remove()
+        
 }
 
 //Erase item from list
@@ -86,7 +98,9 @@ const delButton = document.getElementsByClassName('fa-trash')
 function remove(){
     for ( let i = 0; i < delButton.length; i ++){
         delButton[i].addEventListener('click', function(e){
-            const index = e.target.id 
+            const index = e.target.id
+            console.log('Nut xoa') 
+            console.log(index)
             LIST.splice(index, 1)
             render()
             remove()
@@ -96,7 +110,9 @@ function remove(){
     }
 }
 
+//Upload to mockAPI
 async function fetchdata(){
+    // const firstData = await fetch(`https://5ec285b38ebdcc0016a59e51.mockapi.io/Accounts/${loginID}/todolist`)
     const firstData = await fetch('https://5ec285b38ebdcc0016a59e51.mockapi.io/Accounts/1/todolist')
     const realData = await firstData.json()
     return realData
@@ -115,27 +131,48 @@ async function postData(url, data){
 async function deletePost(){
     const rlData = await fetchdata()
     rlData.forEach(async function(element){
-        console.log(element.id)
+        // console.log(element.id)
+        // await fetch(`https://5ec285b38ebdcc0016a59e51.mockapi.io/Accounts/${loginID}/todolist/${element.id}`,{
+        // method: 'delete'
         await fetch(`https://5ec285b38ebdcc0016a59e51.mockapi.io/Accounts/1/todolist/${element.id}`,{
         method: 'delete'
     })
     })
 }
 
-let saveButton = document.getElementById('saveButton')
+const saveButton = document.getElementById('saveButton')
 saveButton.addEventListener('click', (e)=>{
     e.preventDefault()
     deletePost()
-    console.log('a')
-    console.log(LIST.length)
+    // console.log('a')
+    // console.log(LIST.length)
     for (let i = 0; i<LIST.length; i++){
         let data = {
-        "id": `${i}`,
-        "AccountId": "1",
+        
+        "AccountId": '1',
         "todolist": `${LIST[i].name}`,
         "status": LIST[i].status
         }
+        // let url = `https://5ec285b38ebdcc0016a59e51.mockapi.io/Accounts/${loginID}/todolist`
         let url = 'https://5ec285b38ebdcc0016a59e51.mockapi.io/Accounts/1/todolist'
         postData(url,data)
     }   
 })
+
+// const showButton = document.getElementById('showButton')
+// showButton.addEventListener('click',(e)=>{
+//     e.preventDefault()
+//     async function show(){
+//         const rlData = await fetchdata()
+//         rlData.forEach((element) =>{
+//             let getItem = {name: `${element.todolist}, status: ${element.status}`}
+//             LIST.push(getItem)
+//         })
+//     }
+//     show()
+//     render()
+//     remove()
+//     check('fa-circle')
+//     check('fa-dot-circle')
+
+// })
